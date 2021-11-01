@@ -1,0 +1,12 @@
+// The core structure is based on the class called section.
+.section{
+    @include grid-layout();
+
+
+    &__content{
+        grid-column: span 12;
+        position: relative;
+
+
+    }    
+}

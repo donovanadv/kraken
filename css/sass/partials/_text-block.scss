@@ -1,0 +1,185 @@
+// Text Block
+.text-block{
+    // padding: 0px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+
+    &_y-lg{
+        padding: 75px 0;
+    }
+    &_y-md{
+        padding: 75px 0;
+    }
+    &_y-sm{
+        padding: 75px 0;
+    }
+    &_y-top-none{
+        padding-top: 0;
+    }
+    &_y-btm-none{
+        padding-bottom: 0;
+    }
+
+
+    
+
+    &_left {
+        justify-content: flex-start;
+        text-align: left;
+        .text-block__content{
+            align-items: flex-start;
+        }
+    }
+    &_center {
+        justify-content: center;
+        text-align: center;
+        .text-block__content{
+            align-items: center;
+        }
+    }
+    &_right {
+        justify-content: flex-end;
+        text-align: right;
+        .text-block__content{
+            align-items: flex-end;
+        }
+    }
+
+    .text-block__content{
+        max-width: 850px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        margin: 0 auto;
+        align-items: center;
+
+
+        .text-content__subtitle{
+            padding-bottom: 10px;
+
+            &_color-primary{
+                color: $primaryColor;
+            }
+            &_color-primary-dark{
+                color: $primaryDarkColor;
+            }
+            &_color-secondary{
+                color: $secondaryColor;
+            }
+            &_color-secondary-dark{
+                color: $secondaryDarkColor;
+            }
+            &_color-tertiary{
+                color: $tertiaryColor;
+            }
+            &_color-tertiary-dark{
+                color: $tertiaryDarkColor;
+            }
+        }
+        .text-content__title{
+            font-weight: bold;
+
+            &_color-primary{
+                color: $primaryColor;
+            }
+            &_color-primary-dark{
+                color: $primaryDarkColor;
+            }
+            &_color-secondary{
+                color: $secondaryColor;
+            }
+            &_color-secondary-dark{
+                color: $secondaryDarkColor;
+            }
+            &_color-tertiary{
+                color: $tertiaryColor;
+            }
+            &_color-tertiary-dark{
+                color: $tertiaryDarkColor;
+            }
+
+            &_xlg{
+                @include font-size($title_xlg);
+            }
+            &_lg{
+                @include font-size($title_lg);
+            }
+            &_md{
+                @include font-size($title_md);
+            }
+            &_sm{
+                @include font-size($title_sm);
+            }
+        }
+        .text-content__text{
+            max-width: 550px;
+            
+            p{
+                &_color-primary{
+                    color: $primaryColor;
+                }
+                &_color-primary-dark{
+                    color: $primaryDarkColor;
+                }
+                &_color-secondary{
+                    color: $secondaryColor;
+                }
+                &_color-secondary-dark{
+                    color: $secondaryDarkColor;
+                }
+                &_color-tertiary{
+                    color: $tertiaryColor;
+                }
+                &_color-tertiary-dark{
+                    color: $tertiaryDarkColor;
+                }
+            }
+        }
+        .text-content__links{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        
+            .text-content__link{
+                margin: 20px 5px;
+            }
+        }
+    }
+    &_bg{
+        background-size: cover;
+        background-position: center;
+        padding: 100px 25px;
+        position: relative;
+
+        &:before{
+            content: "";
+            background: #0000005e;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .text-block__content{
+            .text-content__subtitle{
+
+            }
+            .text-content__title{
+                
+            }
+            .text-content__text{
+
+            }
+            .text-content__link{
+
+            }
+        }
+    }
+}

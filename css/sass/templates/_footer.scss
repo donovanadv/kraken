@@ -1,0 +1,115 @@
+.site-footer{
+    position: relative;
+    background-color: $secondaryColor;
+    
+    &.site-footer_offset{
+        margin-top: -45px;
+    }
+
+    .site-footer__container{
+        grid-column: 2/12;
+        padding-top: 45px;
+        padding-bottom: 45px;
+        display: flex;
+        align-items: flex-start;
+
+        @include grid-layout();
+
+        .site-footer__logo{
+            position: relative;
+            grid-column: 2/4;
+
+            a{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            img{
+                // width: 100%;
+                // height: 100%;
+                max-height: 60px;
+            }
+        }
+
+
+        .site-footer__col{
+            display: flex;
+            flex-direction: column;
+
+            .site-footer__col-title{
+                padding-bottom: 15px;
+            }
+            .site-footer__item{
+
+                .site-footer__item-content{
+                    padding-bottom: 10px;
+
+                    a{
+                        display: flex;
+                        flex-direction: column;
+
+                        &:hover p{
+                            color: $tertiaryDarkColor;
+                        }
+
+                        p{
+                            transition: all .4s;
+                        }
+                    }
+                    .site-footer__item-link{
+                        padding-right: 0px;
+                    }
+                }
+            }
+        }
+        .site-footer__contact{
+            grid-column: 5/7;
+        }
+        .site-footer__social{
+            grid-column: 7/7;
+        }
+        .site-footer__menu{
+            grid-column: 9/12;
+        }  
+    }
+}
+.copyright{
+    padding: 20px 0;
+    @include grid-layout();
+    .copyright__content{
+        grid-column: 2/12;
+        display: flex;
+
+        .rights-reserved{
+            font-size: 12px;
+            color: $primaryDarkColor;
+            display: inline;
+        }
+        .privacy-policy{
+            color: $primaryDarkColor;
+            padding-left: 10px;
+            margin-left: 10px;
+            font-size: 12px;
+            display: inline;
+            position: relative;
+            
+            &:before{
+                content:"";
+                display: block;
+                background-color: $primaryDarkColor;
+                width: 1px;
+                height: 10px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &hover{
+
+            }
+        }
+    }
+}

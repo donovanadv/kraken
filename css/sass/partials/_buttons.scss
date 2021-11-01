@@ -1,0 +1,146 @@
+button,
+.button,
+button:visited,
+.button:visited {
+	position: relative;
+	font-family: $primaryFont;
+	@include font-size($text_xsm);
+	font-weight: 600;
+	letter-spacing: .1em;
+	color: $tertiaryColor;
+	border: 0;
+	text-transform: uppercase;
+	padding: 15px 60px;
+	display: inline-block;
+    white-space: nowrap;
+	text-decoration: none;
+	border-radius: 5px;
+	z-index: 1;
+
+	&::before{
+		content: "";
+		transition: all .4s;
+		display: inline-block;
+		background-color: $secondaryColor;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+		position: absolute;
+		z-index: -1;
+		pointer-events: none;
+	}
+	&::after{
+		content: "";
+		transition: all .4s;
+		display: inline-block;
+		background-color: transparent;
+		border: solid 2px $secondaryColor;
+		top: 8px;
+		left: 8px;
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+		position: absolute;
+		z-index: -2;
+		pointer-events: none;
+	}
+}
+
+button:focus,
+button:hover,
+button:active,
+.button:focus,
+.button:hover,
+.button:active{
+	color: $tertiaryColor;
+
+	&::after{
+		top: 4px;
+		left: 4px;
+	}
+}
+
+
+// Color Options
+.button_white-outline{
+	&::after{
+		border: solid 2px $tertiaryColor !important; 
+	}
+}
+
+
+
+a,
+a:visited{
+	color: $primaryColor;
+	transition: all .4s;
+	text-decoration: none;
+}
+a:focus,
+a:hover,
+a:active{
+	color: $secondaryColor;
+}
+
+
+.link_color-primary,
+.link_color-primary:visited{
+	color: $primaryColor;
+
+	&:focus,
+	&:hover,
+	&:active{
+		color: $secondaryColor;
+	}
+}
+.link_color-primary-dark,
+.link_color-primary-dark:visited{
+	color: $primaryDarkColor;
+
+	&:focus,
+	&:hover,
+	&:active{
+		color: $secondaryColor;
+	}
+}
+.link_color-secondary,
+.link_color-secondary:visited{
+	color: $secondaryColor;
+
+	&:focus,
+	&:hover,
+	&:active{
+		color: $primaryColor;
+	}
+}
+.link_color-secondary-dark,
+.link_color-secondary-dark:visited{
+	color: $secondaryDarkColor;
+
+	&:focus,
+	&:hover,
+	&:active{
+		color: $primaryColor;
+	}
+}
+.link_color-tertiary,
+.link_color-tertiary:visited{
+	color: $tertiaryColor;
+
+	&:focus,
+	&:hover,
+	&:active{
+		color: $primaryColor;
+	}
+}
+.link_color-tertiary-dark,
+.link_color-tertiary-dark:visited{
+	color: $tertiaryDarkColor;
+	&:focus,
+	&:hover,
+	&:active{
+		color: $primaryColor;
+	}
+}

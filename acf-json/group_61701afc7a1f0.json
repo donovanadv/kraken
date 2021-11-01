@@ -1,0 +1,73 @@
+{
+    "key": "group_61701afc7a1f0",
+    "title": "Block Styling (Settings)",
+    "fields": [
+        {
+            "key": "field_5f299bd610a46",
+            "label": "Content Color",
+            "name": "content-theme",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "kf-theme-selector",
+                "id": ""
+            },
+            "choices": {
+                "primary": "Primary",
+                "primary-dark": "Primary (Dark)",
+                "secondary": "Secondary",
+                "secondary-dark": "Secondary (Dark)",
+                "tertiary": "Tertiary",
+                "tertiary-dark": "Tertiary (Dark)"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_61701b26814ba",
+            "label": "Alignment",
+            "name": "content-alignment",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "<span class=\"dashicons dashicons-editor-alignleft\"><\/span> Left",
+                "center": "<span class=\"dashicons dashicons-editor-aligncenter\"><\/span> Center",
+                "right": "<span class=\"dashicons dashicons-editor-alignright\"><\/span> Right"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1635192184
+}

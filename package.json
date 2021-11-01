@@ -1,0 +1,37 @@
+{
+    "name": "kraken-start",
+    "version": "1.4.5",
+    "description": "A WordPress starter theme for kraken websites",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kevinmancuso/kraken.git"
+    },
+    "author": "kraken",
+    "license": "UNLICENSED",
+    "bugs": {
+        "url": "https://github.com/kevinmancuso/kraken/issues"
+    },
+    "homepage": "https://github.com/kevinmancuso/kraken#readme",
+    "devDependencies": {
+        "del": "^6.0.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-jscs": "^4.1.0",
+        "gulp-jshint": "^2.1.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-uglify": "^3.0.2",
+        "jshint": "^2.13.1"
+    },
+    "browserslist": [
+        "defaults",
+        "> 0.5% in US"
+    ],
+    "dependencies": {}
+}

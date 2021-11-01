@@ -1,0 +1,116 @@
+
+/*--------------------------------------------------------------
+## Standard Text 
+
+<div class="standard-text">
+	<h1 class="standard-text__y_md standard-text__left standard-text__dark standard-text__title">Header Test</h1>
+</div>
+
+<div class="basic-text">
+	<p class="basic-text__text_center basic-text__text_primary basic-text__text">Header Test</p>
+</div>
+
+
+--------------------------------------------------------------*/
+.basic-text{
+	display: inline-block;
+
+    /*---- ## Standard Text Alignment ----*/
+    &__text_left{
+        text-align: left;
+    }
+    &__text_center{
+        text-align: center;
+    }
+    &__text_right{
+        text-align: right;
+    }
+    /*---- ## Standard Text Color ----*/
+    &__text_primary{
+        color: $primaryColor;
+    }
+    &__text_primary-dark{
+        color: $primaryDarkColor;
+    }
+    &__text_secondary{
+        color: $secondaryColor;
+    }
+    &__text_secondary-dark{
+        color: $secondaryDarkColor;
+    }
+    &__text_tertiary{
+        color: $tertiaryColor;
+    }
+    &__text_tertiary-dark{
+        color: $tertiaryDarkColor;
+    }
+    /*---- ## Standard Text Style ----*/
+    &__text_italic{
+        font-style: italic;
+    }
+    &__text_light{
+        font-weight: 300;
+    }
+    &__text_bold{
+        font-weight: 700;
+    }
+    &__text_ellipse{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;	
+    }
+
+    /*---- ## Standard Text Title ----*/
+    &__title {
+        width: 100%;
+        position: relative;
+        white-space: normal;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        font-weight: 600;
+        line-height: 1.2;
+        font-family: EB Garamond,sans-serif;
+    }
+    &__title_xlg{
+        @include font-size($title_xlg);
+    }
+    &__title_lg{
+        @include font-size($title_lg);
+    }
+    &__title_md{
+        @include font-size($title_md);
+    }
+    &__title_sm{
+        @include font-size($title_sm);
+    }
+ 
+    /*---- ## Standard Text Text ----*/
+    &__text {
+        width: 100%;
+        position: relative;
+        white-space: normal;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 400;
+        line-height: 1.4;
+        font-family: EB Garamond,sans-serif;
+    }
+    &__text_xsm{
+        @include font-size($text_xsm);
+    }
+    &__text_sm{
+        @include font-size($text_sm);
+    }
+    &__text_md{
+        @include font-size($text_md);
+    }
+ 
+}
+
+
+
+
+
+
+

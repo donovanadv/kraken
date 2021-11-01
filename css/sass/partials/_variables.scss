@@ -1,0 +1,119 @@
+// Variables
+
+//Color
+$primaryColor: #00629D;
+$primaryDarkColor: #00304D;
+$secondaryColor: #348955;
+$secondaryDarkColor: #1d4d2f;
+$tertiaryColor: #ffffff;
+$tertiaryDarkColor: #b6b6b6;
+
+// Fonts
+$primaryFont: 'Montserrat', sans-serif;
+// $secondaryFont: 'Open Sans', sans-serif;
+
+$burger: 1050px; // Tablet
+$desktop: 1440px; // desktops
+$laptopL: 1200px; // large laptops
+$laptop: 1024px; // laptop
+$tablet: 768px; // tablet
+$mobileL: 480px; // large phone
+$mobileM: 390px; // medium phone
+$mobileS: 320px; // small phone
+
+
+
+
+
+// Font Sizes
+// $title_xlg: 45px; 
+// $title_lg: 35px;
+// $title_md: 25px;
+// $title_sm: 20px;
+
+// $text_md: 16px;
+// $text_sm: 14px;
+// $text_xsm: 12px;
+
+$breakpoints: (
+  small : (480px, 1),
+  medium: 700px,
+  large : 1024px
+);
+$title_xlg: (
+  null  : (30px, 1),
+  small : 35px,
+  medium: 40px,
+  large : 45px
+);
+$title_lg: (
+  null  : (20px, 1),
+  small : 25px,
+  medium: 30px,
+  large : 35px
+);
+$title_md: (
+  null  : (18px, 1),
+  small : 20px,
+  medium: 20px,
+  large : 25px
+);
+$title_sm: (
+  null  : (17px, 1),
+  small : 18px,
+  medium: 19px,
+  large : 20px
+);
+$text_md: (
+  null  : (14px, 1),
+  small : 14px,
+  medium: 15px,
+  large : 16px
+);
+$text_sm: (
+  null  : (13px, 1),
+  small : 13px,
+  medium: 14px,
+  large : 14px
+);
+$text_xsm: (
+  null  : (10px, 1),
+  small : 10px,
+  medium: 12px,
+  large : 12px
+);
+
+// 	@include font-size($p-font-sizes);
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+      @if $fs-breakpoint == null {
+        @include make-font-size($fs-font-size);
+      }
+      @else {
+        // If $fs-font-size is a key that exists in
+        // $fs-breakpoints, use the value
+        @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+          $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+        }
+        @media screen and (min-width: $fs-breakpoint) {
+          @include make-font-size($fs-font-size);
+        }
+      }
+    }
+  }
+  // Utility function for mixin font-size
+  @mixin make-font-size($fs-font-size) {
+    // If $fs-font-size is a list, include
+    // both font-size and line-height
+    @if type-of($fs-font-size) == "list" {
+      font-size: nth($fs-font-size, 1);
+      @if (length($fs-font-size) > 1) {
+        line-height: nth($fs-font-size, 2);
+      }
+    }
+    @else {
+      font-size: $fs-font-size;
+    }
+  }
+  
+

@@ -1,0 +1,28 @@
+// // Variables
+@import "partials/variables";
+
+// // Modules
+@import "modules/mixins";
+
+// // Partials
+// Boiler plate enabled in style.css
+@import "partials/images";
+@import "partials/buttons";
+@import "partials/print";
+@import "partials/text-block";
+@import "partials/wzywig";
+
+@import "partials/hero";
+@import "partials/social-icons";
+@import "partials/text";
+
+
+
+
+
+@import "partials/bg-block";
+
+// // Templates
+@import "templates/header";
+@import "templates/content";
+@import "templates/footer";

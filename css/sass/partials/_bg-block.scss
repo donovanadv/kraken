@@ -1,0 +1,150 @@
+/*--------------------------------------------------------------
+## Section BG
+--------------------------------------------------------------*/
+.page-background {
+    position: relative;
+    padding: 150px 0px 150px;
+    overflow: hidden;
+    min-height: 100vh; // Default
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column-gap: 20px;
+
+
+    &.page-background_y-full{
+        min-height: 100vh;
+    }
+    &.page-background_y-lg{
+        min-height: 80vh;
+    }
+    &.page-background_y-md{
+        min-height: 50vh;
+    }
+    &.page-background_y-sm{
+        min-height: 25vh;
+    }
+}
+
+/*--------------------------------------------------------------
+## Section Video
+--------------------------------------------------------------*/
+.page-background_video {
+
+}
+.page-background__video{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column-gap: 20px;
+}
+.page-background__no-video::before {
+    padding-top: 50%;
+    content: "";
+    display: inline-block;
+}
+.page-background__video-content {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    height: 100vh;
+
+    grid-column: 1/13;
+}
+.page-background__content {
+    position: relative;
+    z-index: 2;
+    min-height: 225px;
+    transform: translate3d(0, 0, 0);
+    /* fix glitch causing content over video to disappear in some cases */
+    margin: 0 auto;
+    width: 100%;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+    display: flex;
+    justify-content: center;
+    grid-column: 2/12;
+
+}
+@supports (object-fit: cover) {
+    .page-background_video_disabled {
+        display: none;
+    }
+    .page-background__no-video {
+        display: block;
+    }
+    .page-background__video-content {
+        display: block;
+    }
+    .page-background_video_disabled{
+        display: none;
+    }
+}
+@supports (object-fit: cover) and (-ms-ime-align: auto) {
+    .page-background__video-content {
+        height: auto;
+    }
+}
+
+
+
+
+    /*--------------------------------------------------------------
+    ## Background Image
+    --------------------------------------------------------------*/
+    .bg-image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .bg-image_repeat_x {
+        background-repeat: repeat-x;
+    }
+    .bg-image_repeat_y {
+        background-repeat: repeat-y;
+    }
+    .bg-image_repeat_both {
+        background-repeat: repeat;
+    }
+    .bg-image_size_contain {
+        background-size: contain;
+    }
+    .bg-image_pos_left-top {
+        background-position: left top;
+    }
+    .bg-image_pos_left-center {
+        background-position: left center;
+    }
+    .bg-image_pos_left-bottom {
+        background-position: left bottom;
+    }
+    .bg-image_pos_center-top {
+        background-position: center top;
+    }
+    .bg-image_pos_center-bottom {
+        background-position: center bottom;
+    }
+    .bg-image_pos_right-top {
+        background-position: right top;
+    }
+    .bg-image_pos_right-center {
+        background-position: right center;
+    }
+    .bg-image_pos_right-bottom {
+        background-position: right bottom;
+    }

@@ -1,0 +1,147 @@
+body.login {
+    background: #1A1F1F;
+}
+
+body.login * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.login div#login {
+    width: 100%;
+    margin: auto;
+    max-width: 450px;
+}
+
+body.login div#login h1 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.login div#login h1 a {
+    background-image: url(../../images/agency-logo.svg);
+    background-size: contain;
+    width: 250px;
+    height: 70px;
+    margin-bottom: 0;
+}
+
+body.login div#login form {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0;
+    font-weight: 400;
+    overflow: inherit;
+    background: #fff;
+    border: 0;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+body.login div#login form p input,
+body.login div#login form .user-pass-wrap .wp-pwd input {
+    padding: 0 10px;
+    margin: 0;
+    color: #1A1F1F;
+    font-size: 14px;
+    outline: none;
+}
+
+body.login div#login form .user-pass-wrap .wp-pwd button {
+    display: none !important;
+}
+
+body.login div#login form p {
+    width: 100%;
+}
+
+body.login div#login form .user-pass-wrap {
+    width: 100%;
+    margin-top: 10px;
+}
+
+body.login form .forgetmenot {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+body.login form .forgetmenot #rememberme {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+body.login form .submit #wp-submit {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #00C0F3;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+body.login form .submit #wp-submit:focus,
+body.login form .submit #wp-submit:visited,
+body.login form .submit #wp-submit:active,
+body.login form .submit #wp-submit:hover {
+    color: #fff;
+    background: #1A1F1F;
+}
+
+body.login div#login #nav {
+    padding: 0;
+}
+
+body.login div#login #nav a,
+body.login div#login #nav a:visited {
+    color: #ffffff;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+body.login div#login #nav a:focus,
+body.login div#login #nav a:visited,
+body.login div#login #nav a:active,
+body.login div#login #nav a:hover {
+    color: #00C0F3;
+}
+
+body.login div#login #backtoblog {
+    padding: 0;
+}
+
+body.login div#login #backtoblog a,
+body.login div#login #backtoblog a:visited {
+    color: #ffffff;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+body.login div#login #backtoblog a:focus,
+body.login div#login #backtoblog a:active,
+body.login div#login #backtoblog a:hover {
+    color: #00C0F3;
+}
+
+#wp-auth-check-wrap #wp-auth-check {
+    background-color: #1A1F1F;
+    padding: 30px 10px 0;
+}
+
+#wp-auth-check-wrap #wp-auth-check .wp-auth-check-close {
+    color: #ffffff;
+}
