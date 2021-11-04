@@ -1001,6 +1001,99 @@ select {
   -webkit-appearance: none; }
 
 /*--------------------------------------------------------------
+# Slick Slide Defaults
+--------------------------------------------------------------*/
+.slick-slide {
+  text-align: center;
+  outline: none; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+  transition-delay: 10ms;
+  overflow: hidden; }
+
+.slider {
+  width: 50%;
+  margin: 100px auto; }
+
+.slick-slide {
+  margin: 0px 20px; }
+
+.slick-slide img {
+  width: 100%; }
+
+/*--------------------------------------------------------------
+# Slick Next, Previous
+--------------------------------------------------------------*/
+.slide-prev, .slide-next {
+  position: absolute !important;
+  transform: translateY(-50%);
+  top: 50% !important;
+  z-index: 12;
+  width: 55px;
+  height: 55px;
+  background-color: #231F20;
+  cursor: pointer;
+  transition: all .4s ease;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .slide-prev img, .slide-next img {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 100000;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg); }
+  .slide-prev:before, .slide-next:before {
+    display: none; }
+  .slide-prev:after, .slide-next:after {
+    border: none; }
+
+.slide-prev {
+  left: -20px; }
+
+.slide-next {
+  right: -20px; }
+  .slide-next img {
+    transform: translateY(-50%) rotate(-90deg); }
+
+/*--------------------------------------------------------------
+# Slick Dots
+--------------------------------------------------------------*/
+.slick-dots {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%; }
+  .slick-dots li.slick-active {
+    opacity: 1; }
+    .slick-dots li.slick-active button {
+      background-color: #348955; }
+  .slick-dots li button {
+    padding: 0;
+    margin: 0 10px;
+    font-size: 0;
+    color: transparent;
+    width: 10px;
+    height: 10px;
+    background-color: #00629D;
+    cursor: pointer; }
+    .slick-dots li button:before {
+      content: "";
+      display: none; }
+    .slick-dots li button:after {
+      content: "";
+      display: none; }
+
+/*--------------------------------------------------------------
 ## Section BG
 --------------------------------------------------------------*/
 .page-background {

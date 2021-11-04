@@ -1,6 +1,9 @@
 // Returns a function, that, as long as it continues to be invoked, will not
 // be triggered. The function will be called after it stops being called for
 // N milliseconds. If `immediate` is passed, trigger the function on the
+
+// const slick = require("./slick");
+
 // leading edge, instead of the trailing.
 function debounce(func, wait, immediate) {
     var timeout;
@@ -411,6 +414,32 @@ function contactButton() {
 
 
 
+function slick(){
+    $(".regular").slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      nextArrow: '<button class="slide-next"><img src="/wp-content/themes/kraken/images/icons/arrow-white.svg" alt="Slider Next"></button>',
+      prevArrow: '<button class="slide-prev"><img src="/wp-content/themes/kraken/images/icons/arrow-white.svg" alt="Slider Previous"></button>'
+    });
+    $(".center").slick({
+      dots: true,
+      infinite: true,
+      centerMode: true,
+      slidesToShow: 5,
+      slidesToScroll: 3,
+      nextArrow: '<button class="slide-next"><img src="/wp-content/themes/kraken/images/icons/arrow-white.svg" alt="Slider Next"></button>',
+      prevArrow: '<button class="slide-prev"><img src="/wp-content/themes/kraken/images/icons/arrow-white.svg" alt="Slider Previous"></button>'
+    });
+    $(".lazy").slick({
+      lazyLoad: 'ondemand', // ondemand progressive anticipated
+      infinite: true,
+      nextArrow: '<button class="slide-next"><img src="/wp-content/themes/kraken/images/icons/arrow-white.svg" alt="Slider Next"></button>',
+      prevArrow: '<button class="slide-prev"><img src="/wp-content/themes/kraken/images/icons/arrow-white.svg" alt="Slider Previous"></button>'
+    });
+}
+
 
 
 /* General */
@@ -422,6 +451,7 @@ $(function() {
     parallaxAnimation();
     // formAsteriskColor();
     // contactButton();
+    slick();
     jsMap();
 });
 
@@ -575,17 +605,25 @@ function lazyLoad($target) {
 
 
 
-fetch("https://api.spotify.com/v1/audio-analysis/6EJiVf7U0p1BBfs0qqeb1f", {
-  method: "GET",
-  headers: {
-    Authorization: `Bearer ${userAccessToken}`
-  }
-})
-.then(response => response.json())
-.then(({beats}) => {
-  beats.forEach((beat, index) => {
-    console.log(`Beat ${index} starts at ${beat.start}`);
-  })
-})
+
+
+
+
+
+
+
+
+// fetch("https://api.spotify.com/v1/audio-analysis/6EJiVf7U0p1BBfs0qqeb1f", {
+//   method: "GET",
+//   headers: {
+//     Authorization: `Bearer ${userAccessToken}`
+//   }
+// })
+// .then(response => response.json())
+// .then(({beats}) => {
+//   beats.forEach((beat, index) => {
+//     console.log(`Beat ${index} starts at ${beat.start}`);
+//   })
+// })
 
 
