@@ -36,6 +36,12 @@ A starter theme by Donovan Advertising.
 - Update the default link styles in the `Links` section of `style.css`.
 - Remove the `Gravity Forms` section from `style.css` if the Gravity Forms plugin will not be used.
 - If your theme will not use video embeds, remove the `initFitvids()` function and call from `js/src/functions.js` and delete `js/src/jquery.fitvids.js`.
+- If your theme will not use leaflet, remove the `jsMap();` function and call from `js/src/leaflet.js` and delete `css/src/leaflet.css`.
+- If your theme will not use slick, remove the `slick();` function and call from `js/src/slick.js` and delete `css/src/slick.css` & css/sass/partials/_slick.scss`, and remove call from `css/sass/main.scss`.
+- If your theme will not use mpdf, remove the `require statement` from `composer.json`.
+- If your theme will not use composer, remove the `vendor` folder and also remove the  `composer.json, & composer.lock`.
+
+
 
 #### Other Notes
 
