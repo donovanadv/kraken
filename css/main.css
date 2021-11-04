@@ -983,6 +983,23 @@ a:active {
       .basic-text__text_md {
         font-size: 16px; } }
 
+select, input, textarea {
+  width: 100%;
+  appearance: none;
+  border: solid 1px #00304D;
+  padding: 10px;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none; }
+
+select {
+  position: relative;
+  background-image: url(../images/icons/arrow.svg);
+  padding-right: 25px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) 50%;
+  -webkit-appearance: none; }
+
 /*--------------------------------------------------------------
 ## Section BG
 --------------------------------------------------------------*/
@@ -1127,7 +1144,7 @@ a:active {
     left: 0;
     width: 100%;
     transition: all .4s;
-    z-index: 10000000000; }
+    z-index: 10000; }
   .site-header_fixed {
     background-color: #fff; }
   .site-header_wp-logged {

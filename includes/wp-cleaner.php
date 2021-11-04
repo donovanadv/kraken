@@ -23,7 +23,7 @@ function kraken_disable_post_archives($query){
         nocache_headers();
     }
 }
-add_action('parse_query', 'kraken_disable_post_archives');
+// add_action('parse_query', 'kraken_disable_post_archives');
 
 /**
  * Unregister default taxonomies for Posts

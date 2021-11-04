@@ -1,0 +1,17 @@
+select,input,textarea{
+    width: 100%;
+    appearance: none;
+    border: solid 1px $primaryDarkColor;
+    padding: 10px;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance:none;
+}
+select{
+    position: relative;
+    background-image: url(../images/icons/arrow.svg);
+    padding-right: 25px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) 50%;
+    -webkit-appearance:none;
+}

@@ -133,7 +133,6 @@ function kraken_admin_menu_order($menu_order) {
             }
         }
     }
-    
     return $custom_order;
 }
 add_filter('custom_menu_order', '__return_true'); // enable menu_order filter
@@ -148,3 +147,6 @@ add_filter('menu_order', 'kraken_admin_menu_order'); // filter menu order
 //     add_theme_support( 'woocommerce' );
 // }
 // add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+
+

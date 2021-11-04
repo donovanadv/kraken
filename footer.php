@@ -130,7 +130,9 @@ if(!$d_enable_header){
 			<div class="copyright">
 				<div class="copyright__content">
 					<div class="rights-reserved">© 2021. All Rights Reserved</div>
+					<?php if($f_privacy){ ?>
 					<a class="privacy-policy" href="<?php echo $f_privacy['url']; ?>">Privacy Policy</a>
+					<?php } ?>
 				</div>
 			</div>
 		</div>

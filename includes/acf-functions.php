@@ -86,7 +86,6 @@ function kraken_acf_wysiwyg_disable_auto_embed($value, $post_id, $field) {
     if(!empty($GLOBALS['wp_embed']) && !$field['enable_autoembed']) {
 	   remove_filter('acf_the_content', array( $GLOBALS['wp_embed'], 'autoembed' ), 8);
     }
-	
 	return $value;
 }
 add_filter('acf/format_value/type=wysiwyg', 'kraken_acf_wysiwyg_disable_auto_embed', 10, 3); // disable autoembed
@@ -95,7 +94,6 @@ function kraken_acf_wysiwyg_disable_auto_embed_after($value, $post_id, $field) {
     if(!empty($GLOBALS['wp_embed']) && !$field['enable_autoembed']) {
 	   add_filter('acf_the_content', array( $GLOBALS['wp_embed'], 'autoembed' ), 8);
     }
-	
 	return $value;
 }
 add_filter('acf/format_value/type=wysiwyg', 'kraken_acf_wysiwyg_disable_auto_embed_after', 20, 3); // re-enable autoembed after value is formatted
@@ -116,7 +114,6 @@ function kraken_acf_wysiwyg_disable_auto_embed_class($field) {
         $field['wrapper']['class'][] = 'ks-disable-autoembed';
         $field['wrapper']['class'] = implode(' ', $field['wrapper']['class']);
     }
-
     return $field;
 }
 add_filter('acf/prepare_field/type=wysiwyg', 'kraken_acf_wysiwyg_disable_auto_embed_class'); // add class to wrapper (so JS knows to disable the wpview TinyMCE plugin)
@@ -151,7 +148,6 @@ function kraken_acf_template_filter_query($args, $field, $post_id) {
             )
         );
     }
-	
     return $args;
 }
 add_filter('acf/fields/post_object/query', 'kraken_acf_template_filter_query', 10, 3); // update query for post object fields to include template filter
@@ -290,7 +286,6 @@ add_action('acf/validate_value/type=taxonomy', 'kraken_acf_multi_min_max_validat
 add_action('acf/validate_value/type=user', 'kraken_acf_multi_min_max_validation', 10, 4); // validate min/max settings for user fields
 add_action('acf/validate_value/type=gf_select', 'kraken_acf_multi_min_max_validation', 10, 4); // validate min/max settings for Gravity Form fields
 
-
 /**
  * Add custom ACF field types
  */
@@ -333,11 +328,28 @@ add_filter('acf/prepare_field/key=field_608e967fc1c09', 'acf_post_loader_message
 
 
 
-
-
-
-
-
+/**
+ * Character counter for ACF text and textarea field types
+ * https://github.com/Hube2/acf-input-counter
+ */
+function kraken_acf_character_limit_markup($field) {
+    if ($field['maxlength']) { ?>
+        <p class="kraken-character-count">character Count: 
+            <span class="kraken-character-count__current">
+                <?php 
+                    if (function_exists('mb_strlen')) {
+                        // string length showing number of characters.
+                        $len = mb_strlen($field['value']);
+                    } else {
+                        // string length showing a number of bytes
+                        $len = strlen($field['value']);
+                    }
+                    echo $len; ?>
+            </span>/<?php echo $field['maxlength']; ?></p>
+    <?php }
+}
+add_action('acf/render_field/type=text', 'kraken_acf_character_limit_markup'); // add counter to text fields
+add_action('acf/render_field/type=textarea', 'kraken_acf_character_limit_markup'); // add counter to textarea fields
 
 
 

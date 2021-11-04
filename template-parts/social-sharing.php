@@ -16,7 +16,7 @@
 			    case 'template-home.php':
                     // Placeholder
                     $f_hero = get_field('hero');
-                    $meta_image = $f_hero['settings']['image'];
+                    // $meta_image = $f_hero['settings']['image'];
 			    break;	
 			}	
 		} elseif (is_singular('post')) {
