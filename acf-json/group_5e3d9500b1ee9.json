@@ -114,7 +114,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": 35
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5e3d96cd859ed",
@@ -133,7 +133,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": 35
+                    "maxlength": ""
                 }
             ]
         },
@@ -141,6 +141,25 @@
             "key": "field_5e3d95e6859e9",
             "label": "Phone Number",
             "name": "info_contact_phone",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 17
+        },
+        {
+            "key": "field_61844ae1a300c",
+            "label": "Fax Number",
+            "name": "info_contact_phone-fax",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -396,5 +415,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1635368505
+    "modified": 1636115178
 }

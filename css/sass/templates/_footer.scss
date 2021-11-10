@@ -75,15 +75,20 @@
         }  
     }
 }
-.copyright{
+.footer-bar{
     padding: 20px 0;
     @include grid-layout();
-    .copyright__content{
+    .footer-bar__content{
         grid-column: 2/12;
         display: flex;
-
+        justify-content: space-between;
+        .nav-secondary{
+            a{
+                @include font-size($text_xsm);
+            }
+        }
         .rights-reserved{
-            font-size: 12px;
+            @include font-size($text_xsm);
             color: $primaryDarkColor;
             display: inline;
         }
@@ -91,7 +96,7 @@
             color: $primaryDarkColor;
             padding-left: 10px;
             margin-left: 10px;
-            font-size: 12px;
+            @include font-size($text_xsm);
             display: inline;
             position: relative;
             
@@ -106,7 +111,6 @@
                 top: 50%;
                 transform: translateY(-50%);
             }
-
             &hover{
 
             }

@@ -17,6 +17,7 @@ if(!$d_enable_header){
 } else{
 	$f_footer = get_field('global_header_items', 'option');
 }
+$f_footer_bottom = get_field('global_footer_items-2', 'option');
 ?>
 	</div><!-- #content -->
  
@@ -94,9 +95,15 @@ if(!$d_enable_header){
 						<?php if ($f_footer): ?>
 						<div class="header-nav header-nav_alt">
 							<?php foreach ($f_footer as $link): 
-								$e_dead = $link['disable_link'];
-								$e_subnav = $link['enable_subnav'];
-								$f_subnav = $link['subitems'];
+								if($d_enable_header){
+									$e_dead = $link['disable_link'];
+									$e_subnav = $link['enable_subnav'];
+									$f_subnav = $link['subitems'];
+								} else{
+									$e_dead = false;
+									$e_subnav = false;
+									$f_subnav = false;
+								}
 							?>
 							<div class="header-nav__item <?php if($e_subnav){ echo ' header-nav__item_has-child '; } ?>">
 									<?php if($e_subnav){ ?>
@@ -127,11 +134,20 @@ if(!$d_enable_header){
 			<div class="parallax-section__pattern"></div>
 		</div>
 		<div class="section__content section__content_bg_tertiary">
-			<div class="copyright">
-				<div class="copyright__content">
+			<div class="footer-bar">
+				<div class="footer-bar__content">
+					<?php if($f_footer_bottom){ ?>
+						<div class="nav-secondary">
+						<?php foreach($f_footer_bottom as $footer){ ?>
+							<?php if($footer['item']){ ?>
+								<a class="link_color-primary" href="<?php echo $footer['item']['url']; ?>"><?php echo $footer['item']['title']; ?></a>
+							<?php } ?>
+						<?php } ?>
+						</div>
+					<?php }?>
 					<div class="rights-reserved">© 2021. All Rights Reserved</div>
 					<?php if($f_privacy){ ?>
-					<a class="privacy-policy" href="<?php echo $f_privacy['url']; ?>">Privacy Policy</a>
+						<a class="privacy-policy link_color-primary" href="<?php echo $f_privacy['url']; ?>">Privacy Policy</a>
 					<?php } ?>
 				</div>
 			</div>

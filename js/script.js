@@ -221,6 +221,11 @@ function initNavDrop() {
 
 
     if (!m.matches) {
+        setTimeout(function(){ 
+            $offset = ($('.site-header').outerHeight() / 2 + $('.header-nav__item_has-child a').outerHeight() - 5.5);
+            $('.subheader-nav').css('padding-top', $offset + 'px');
+         }, 50);
+         
         // This helps with tab activation features.
         target.focusin(function() {
             jQuery(this).closest('.subheader-nav').addClass('subheader-nav_active');
@@ -277,7 +282,8 @@ function initNavDrop() {
 }
 initNavDrop();
 var efficentNavDrop = debounce(initNavDrop, 250);
-jQuery(window).on('resize', efficentNavDrop);
+jQuery(window).on('resize scroll', efficentNavDrop);
+
 
 
 
